@@ -3,48 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<title> ZappiStore | The Future of Market Research</title>
-	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <script src="js/jquery.js"></script>
-  <script src ="bootstrap/js/bootstrap.js"></script>
-
-  <style type="text/css">
-    .navbar-brand{
-      padding: 0;
-      margin-left: 0;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: 130px;
-      height: 68px;
-      background-size: 130px 68px;
-      background-image: url(image/zappi.png);}
-    .titles{
-      padding-top: 50px;}
-    .btn{
-      margin-top: 15px;}                 
-  </style>  
-
+  <script src ="js/bootstrap.js"></script>
 </head>
 
 
 
 <body>
-  <div class="navbar navbar-inverse navbar-static-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="col-md-2 navbar-header">
         <a href=# class="navbar-brand"></a>
       </div>
-      <ul class="nav navbar-nav col-md-8">
+      <ul class="nav navbar-nav col-md-7">
           <li class="titles"><a href=#>ABOUT</a></li>
           <li class="titles"><a href=#>PRODUCTS</a></li>
           <li class="titles"><a href=#>PRICING</a></li>
           <li class="titles"><a href=#>GET IN TOUCH</a></li>
       </ul>  
-      <div class="col-md-2">
-        <div class="row">
+      <div class="col-md-3 buttons">
         <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-user"></span> SIGN IN</a>
         <a href="#" class="btn btn-primary btn-block">CREATE ACCOUNT</a>
-        </div>
       </div>  
     </div>  
-  </div>
+  </nav>
+
+  <div style="font-size: 30px; padding-top: 100px;" class="col-md-offset-4 col-md-3">
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </div> 
+  <p></p> 
+
+<script>
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('nav').addClass('shrink');
+    } else {
+      $('nav').removeClass('shrink');
+    }
+  });
+</script>
 </body>
