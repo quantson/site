@@ -13,6 +13,9 @@
   font-size:  20px;
   color: white;
 }
+.navbar-nav li{
+  padding-bottom: 10px;
+}  
 .btn{
   margin-top: 20px;
 } 
@@ -34,6 +37,23 @@ nav.shrink .btn-block{
 nav.shrink .buttons{
   margin-top: 20px;
 }
+.dropdown-menu{
+  background-color: #222;
+  padding: 0 0 10px 0;
+}
+.dropdown-menu li{
+  padding: 0 0;
+}  
+.dropdown-menu li a{
+  color: #777;
+  padding-top: 7px;
+}
+
+
+
+
+
+
 .carousel{
   margin-top: 108px;
 } 
