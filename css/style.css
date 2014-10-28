@@ -33,4 +33,13 @@ nav.shrink .btn-block{
 }  
 nav.shrink .buttons{
   margin-top: 20px;
-}    
+}
+.carousel{
+  margin-top: 108px;
+} 
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+.carousel-indicators li{
+    border: 1px solid #000;
+}
