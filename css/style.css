@@ -10,12 +10,12 @@
 }
 .navbar-nav{
   padding-top: 50px;
-  font-size:  20px;
+  font-size:  1.5em;
   color: white;
 }
 .navbar-nav li{
   padding-bottom: 10px;
-}  
+}
 .btn{
   margin-top: 20px;
 } 
@@ -38,12 +38,18 @@ nav.shrink .buttons{
   margin-top: 20px;
 }
 .dropdown-menu{
-  background-color: #222;
-  padding: 0 0 10px 0;
+  background-color: #222;  
+  float: none;
+  left: -300px;
+  width: 2000px;
 }
 .dropdown-menu li{
   padding: 0 0;
-}  
+  display: inline-block;
+} 
+.dropdown-menu li:first-child{
+  margin-left: 300px
+}
 .dropdown-menu li a{
   color: #777;
   padding-top: 7px;
@@ -62,4 +68,5 @@ nav.shrink .buttons{
 }
 .carousel-indicators li{
     border: 1px solid #000;
+    float: right;
 }
