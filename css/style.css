@@ -129,7 +129,8 @@ h1{
   font-family: arial-black;
 }
 .toniclogo{
-  height: 50px;
+  height: 40px;
+  margin-top: 10px;
   background: url(../image/toniclogo.png) no-repeat;
   background-size: 80% ;
 }
@@ -152,4 +153,15 @@ h1{
   height: 207px; 
   background: url(../image/tonic.png) no-repeat center;
   background-size: 100%;
+}
+
+.thumbnail{
+  border: none;
+  background: transparent;
+}
+.thumbnail img{
+  height: 200px;
+  width: auto;
+
+
 }
