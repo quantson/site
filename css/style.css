@@ -20,9 +20,12 @@ body{
 .navbar-nav li{
   padding-bottom: 10px;
 }
-.btn{
-  margin-top: 20px;
-  width: 80%
+.buttons{
+  margin-top: 15px;
+}
+.buttons .btn{
+  width: 80%;
+  margin-top: 5px;
 } 
 nav.shrink .navbar-brand{
   margin-top: 5px;
@@ -36,12 +39,9 @@ nav.shrink .navbar-nav{
   padding-top: 12px;
   font-size: 17px;
 }
-nav.shrink .btn-block{
-  display: inline;
+nav.shrink .btn{
+  width: auto;
 }  
-nav.shrink .buttons{
-  margin-top: 20px;
-}
 .dropdown-menu{
   background-color: rgba(34,34,34,0.95);  
   float: none;
@@ -86,4 +86,70 @@ h1{
 .separator{
   position: relative;
   top: -15px;
+}
+.buynow{
+  background: #A42171;
+  color: #FFF ;
+}
+.featured{
+  width: 32%;
+}
+.featured-middle{
+  margin: 0 2% 0 2%;
+}
+.panel-body{
+  height: 230px;
+  padding: 0;
+}
+.conversion{
+  background: url(../image/conversion.png)no-repeat center;
+  background-size: auto 100%;
+}
+.impack{
+  background: url(../image/impack.png) no-repeat center;
+  background-size: auto 100%;
+}
+.estatic{
+  background: url(../image/estatic.png) no-repeat center;
+  background-size: auto 100%;
+}
+
+.research{
+  width: 24%;
+  margin-right: 1.33%
+}
+.research:last-of-type{
+  margin-right: 0;
+}
+.panel-heading{
+  background-color: white !important;
+}
+.panel-heading strong{
+  font: 1.5em bold;
+  font-family: arial-black;
+}
+.toniclogo{
+  height: 50px;
+  background: url(../image/toniclogo.png) no-repeat;
+  background-size: 80% ;
+}
+.npd{
+  height: 207px;
+  background: url(../image/npd.png) no-repeat center;
+  background-size: 100%;
+}
+.chooseit{
+  height: 207px;
+  background: url(../image/chooseit.png) no-repeat center;
+  background-size: 100%;
+}
+.creative{
+  height: 207px;
+  background: url(../image/creative.png) no-repeat center;
+  background-size: 100%;
+}
+.tonic{
+  height: 207px; 
+  background: url(../image/tonic.png) no-repeat center;
+  background-size: 100%;
 }
