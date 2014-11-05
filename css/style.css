@@ -23,6 +23,9 @@ body{
 .navbar-nav li a{
   color: white !important;
 }
+.navbar-nav li a:hover{
+  color: #999999 !important;
+}
 .buttons{
   margin-top: 15px;
 }
@@ -162,29 +165,32 @@ h1{
   font: 1.5em bold;
   font-family: arial-black;
 }
+.research .panel-body{
+  padding: 0;
+}
+.npd{
+  height: 220px;
+  background: url(../image/npd.png) no-repeat center;
+  background-size: 100%;
+}
+.chooseit{
+  height: 220px;
+  background: url(../image/chooseit.png) no-repeat center;
+  background-size: 100%;
+}
+.creative{
+  height: 220px;
+  background: url(../image/creative.png) no-repeat center;
+  background-size: 100%;
+}
 .toniclogo{
   height: 40px;
   margin-top: 10px;
   background: url(../image/toniclogo.png) no-repeat;
   background-size: 80% ;
 }
-.npd{
-  height: 207px;
-  background: url(../image/npd.png) no-repeat center;
-  background-size: 100%;
-}
-.chooseit{
-  height: 207px;
-  background: url(../image/chooseit.png) no-repeat center;
-  background-size: 100%;
-}
-.creative{
-  height: 207px;
-  background: url(../image/creative.png) no-repeat center;
-  background-size: 100%;
-}
 .tonic{
-  height: 207px; 
+  height: 220px; 
   background: url(../image/tonic.png) no-repeat center;
   background-size: 100%;
 }
