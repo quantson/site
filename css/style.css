@@ -1,6 +1,11 @@
 body{
   background: #F8F8F8;
 }
+@font-face {
+    font-family: neutra;
+    src: url(neutra.ttf);
+}
+
 
 .navbar-brand{
   padding: 0;
@@ -162,8 +167,8 @@ h1{
   background-color: white !important;
 }
 .panel-heading strong{
-  font: 1.5em bold;
-  font-family: arial-black;
+  font-size: 1.2em ;
+  font-family: neutra;
 }
 .research .panel-body{
   padding: 0;
