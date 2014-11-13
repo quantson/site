@@ -11,30 +11,7 @@
 
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="col-md-2 navbar-header">
-        <a href=# class="navbar-brand"></a>
-      </div>
-      <ul class="nav navbar-nav col-md-6">
-          <li class="titles dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href=#>ABOUT</a>
-            <ul class="dropdown-menu">
-              <li><a href=#>WHAT IS ZAPPISTORE</a></li>
-              <li><a href=#>TEAM</a></li>            
-              <li><a href=#>VALIDATION</a></li>
-            </ul>
-          </li>
-          <li class="titles"><a href=#>PRODUCTS</a></li>
-          <li class="titles"><a href=#>PRICING</a></li>
-          <li class="titles"><a href=#>GET IN TOUCH</a></li>
-      </ul>  
-      <div class="col-md-3 col-lg-4 pull-right buttons">
-        <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> SIGN IN</a>
-        <a href="#" class="btn btn-primary">CREATE ACCOUNT</a>
-      </div>  
-    </div>  
-  </nav>
+<?php include "header.html" ?>
 
   <div class="container">  
     <div id="myCarousel" class="carousel slide">
@@ -202,30 +179,7 @@
      
   </div>  
 
-  <div class="footer">
-    <div class="container">
-      <div class="col-md-3 footer-content">
-        <p>OUR PRODUCTS</p>
-        <ul>
-          <li>Creative Test</li>
-          <li>New Product Development</li>
-          <li>Choose It test</li>
-          <li>TNS ConversionModel</li>
-        </ul>
-        <p>Terms and conditions</p>  
-      </div> 
-      <div class="col-md-3 footer-content">
-        <p>ABOUT ZAPPI</p>
-        <ul>
-          <li>What is ZappiStore</li>
-          <li>Pricing</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
-        <p>Follow us on twitter</p> 
-      </div>
-    </div>
-  </div>
+  <?php include ("footer.html") ?>
 
   <script src="js/header.js"></script>
   <script data-cfasync="false" type='text/javascript' src="js/olark.js"></script>
