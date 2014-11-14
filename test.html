@@ -9,13 +9,13 @@
   <script src ="js/bootstrap.js"></script>
   <style type="text/css">
   			.main {
-	display:inline-block;
+  	display:none;
     position:absolute;
     z-index: 3;
 	}
 			.slide {	
-	display: inline-block;
-	z-index: 2;
+	   display: inline-block;
+	   z-index: 2;
 	}	
   </style>
 </head>
@@ -45,11 +45,12 @@
 
 
 	<script type="text/javascript">
-    $('.main').hover(function() {
-         $(this).slideUp(1000);
+    $('.slide').click(function() {
+     
+         $(this).show('slide', {direction: 'up'});
     });
 	$('.slide').mouseleave(function() {
-         $('.main').slideDown(1000);
+         $('.main').slideUp('fast');
     });
     </script>  
 
