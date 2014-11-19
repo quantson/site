@@ -7,86 +7,19 @@ body{
     src: url(neutra.ttf);
 }
 
-.shrink{
-  background-color: rgba(34,34,34,0.90);
-}
-.navbar-brand{
-  padding: 0;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  width: 100px;
-  height: 51px;
-  background-size: 100px 51px;
-  background-image: url(../image/zappi.png);
-}
-.navbar-nav{
-  color: white;
-  padding-top: 12px;
-  font-size: 17px;
-}
-.navbar-nav li{
-  padding-bottom: 10px;
-}
-.navbar-nav li a{
-  color: white !important;
-}
-.navbar-nav li a:hover{
-  color: #999999 !important;
-}
-.buttons{
-  margin-top: 15px;
-}
-.buttons .btn{
-  width: auto;
-  margin-top: 5px;
-}
-.dropdown-menu:after{
-  content: "";
-  background-color: rgba(34,34,34,0.95);
-  width: 3000px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 100%;
-}
-.dropdown-menu:before{
-  content: "";
-  background-color: rgba(34,34,34,0.95);
-  width: 3000px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 100%;
-}
-.dropdown-menu li{
-  padding: 8px 0;
-  display: inline-block;
-} 
-.dropdown-menu{
-  background-color: rgba(34,34,34,0.95);
-  width: 500px;
-  border-radius: 0;
-}
-.dropdown-menu li a{
-  color: #777;
-  padding-top: 7px;
-}
-.dropdown-menu li a:hover{
-  background: transparent;
-  color: #F8F8F8;
-}
-.open a{
-  background: transparent !important;
-}
 
 .store{
-  margin-top: 70px;
+  position: relative;
+  top: -22px;
 }
 .leftslider{
   padding-right: 20px;
   height: 700px;
   border-right: solid 1px black;
+}
+.selectors.scrolled{
+  position: fixed;
+  top: 5px;
 }
 input{
   width: 100%;
@@ -136,6 +69,9 @@ input{
   height: 100px;
   width: auto;
   margin: 0 auto 0 auto;
+}
+.description_short{
+  padding-top: 10px;
 }
 .panel-footer{
   text-transform: uppercase;

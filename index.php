@@ -5,6 +5,7 @@
 	<title> ZappiStore | The Future of Market Research</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
   <script src="js/jquery.js"></script>
   <script src ="js/bootstrap.js"></script>
 </head>

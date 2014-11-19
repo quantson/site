@@ -18,7 +18,7 @@ while ($data = $response->fetch())
       <div class='main'>
         <div class="panel-body">
             <image src="image/product/<?php echo $data['logo_file'] ?>.png">
-            <div><?php echo $data['description_short'] ?></div>
+            <div class="description_short"><?php echo $data['description_short'] ?></div>
           </div>
           <div class="panel-footer">
             <?php echo $data['title'] ?>

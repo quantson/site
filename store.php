@@ -5,6 +5,7 @@
 	<title> ZappiStore | The Future of Market Research</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/store.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
   <script src="js/jquery.js"></script>
   <script src ="js/bootstrap.js"></script>
   <script src="js/isotope.pkgd.js"></script>
@@ -16,6 +17,7 @@
 
 	<div class="container-fluid store">
 		<div class="col-md-2 leftslider">
+      <div class="selectors">
 			<input type="text" placeholder="search">
 			<div class="filters">
 				<div class="filter active one" data-filter="*">Apps</div>
@@ -31,10 +33,11 @@
 								<div class="filter three" data-filter=".static">Static Ad</div>
 								<div class="filter three" data-filter=".pack">Package</div>
 								<div class="filter three" data-filter=".newprod">New product</div>
+      </div>          
 			</div>		
 		</div>
 
-    <div id="container" class="col-md-10">	
+    <div id="container" class="col-md-10 pull-right">	
       <?php include 'products.php' ?>
 	  </div>	
 
@@ -42,19 +45,26 @@
     
   <script type="text/javascript">
     $('.main').hover(function() {
-      var test = $(this);
+      var main = $(this);
       setTimeout(function(){
-        if (test.is(':hover')){
-          test.slideUp(200);
+        if (main.is(':hover')){
+          main.slideUp(300);
         }
       },200);    
     },function(){
       if (! $(this).next().is(':hover')){
-        $(this).slideDown(100);
-      } 
+        $(this).slideDown(300);
+      }
     });
     $('.slide').mouseleave(function() {
-         $(this).prev().slideDown(100);
+         $(this).prev().slideDown(300);
+    });
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 80) {
+        $('.selectors').addClass('scrolled');
+      } else {
+        $('.selectors').removeClass('scrolled');
+      }
     });
   </script>  
 
@@ -73,6 +83,7 @@
   	 $container.isotope({ filter: filterValue });
   	 $('.active').removeClass('active');
   	 $(this).addClass('active');
+     $('html, body').animate({ scrollTop: 0 }, 200);
 		});
   </script>
 
