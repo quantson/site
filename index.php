@@ -12,7 +12,7 @@
 
 <body>
 
-<?php include "header.html" ?>
+  <?php include "header.html" ?>
 
   <div class="container">  
     <div id="myCarousel" class="carousel slide">
