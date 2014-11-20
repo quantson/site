@@ -104,6 +104,10 @@
   -webkit-user-select: none;
   padding-bottom: 20px;
 }
+.dropdown-buy{
+  padding-left: 30px;
+  padding-top: 10px;
+}
 .dropdown-category{
   font-weight: bold;
   color: #4EB3D8 !important;
