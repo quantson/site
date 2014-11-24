@@ -128,3 +128,20 @@
 .dropdown-right ul li a:hover{
   color: black !important;
 }
+
+
+.footer{
+  background: rgb(40,40,40);
+}
+.footer-content{
+  margin-top: 40px;
+}
+.footer ul{
+  padding: 0 0;
+}
+.footer li, .footer p{
+  color: white;
+  list-style: none outside;
+  text-align: left;
+  padding-bottom: 5px;
+}
