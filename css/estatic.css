@@ -1,0 +1,62 @@
+body{
+  background: #F8F8F8;
+  height: 100%;
+}
+@font-face {
+    font-family: neutra;
+    src: url(neutra.ttf);
+}
+
+
+.left-help{
+  padding-right: 20px;
+  min-height: 800px;
+  border-right: solid 1px black;
+}
+
+.main-selection{
+	padding-top: 10px;
+}
+.selection{
+	padding: 10px 0 10px 0;
+	border-radius: 5px;
+	border: solid 1px transparent;
+}
+.selection.active{
+	border-radius: 5px;
+	border: solid 1px orange;
+}
+.selection-title{
+	padding-left: 10px;
+	font-size: 1.5em;
+}
+.user-select{
+	padding: 10px 0 0 0;
+}
+.form-group{
+	margin-bottom: 0;
+}
+.slider{
+	margin: 25px 0 0 15px;
+}
+.slider .slider-selection {
+	background: #BABABA;
+}
+.country{
+	margin-bottom: 30px;
+}
+.region-box{
+	margin-left: 20px;
+}
+.target-group{
+	margin-bottom: 30px;
+}
+.age, .gender, .execution{
+	margin-left: 25px;
+}
+
+.right-info{
+  padding-right: 20px;
+  min-height: 800px;
+  border-left: solid 1px black;
+}
