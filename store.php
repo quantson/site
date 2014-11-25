@@ -36,12 +36,13 @@
       </div>          
 			</div>		
 		</div>
-
     <div id="container" class="col-md-10 pull-right">	
       <?php include 'products.php' ?>
 	  </div>	
+  </div> <!-- end store -->
 
-  </div>
+  <?php include ("footer.html") ?>
+  
     
   <script type="text/javascript">
     $('.main').hover(function() {
@@ -57,19 +58,25 @@
       }
     });
     $('.slide').mouseleave(function() {
-         $(this).prev().slideDown(300);
+      $(this).prev().slideDown(300);
     });
     $(window).scroll(function() {
-      if ($(document).scrollTop() > 80) {
-        $('.selectors').addClass('scrolled');
-      } else {
-        $('.selectors').removeClass('scrolled');
-      }
+        scroll = $(document).scrollTop();
+        offset = $('.store').offset().top;
+        store_height = $('.store').height();
+        sel_height = $('.selectors').height();
+        scroll_stop = offset + store_height - sel_height;
+        if ((scroll >= offset) && (scroll <= scroll_stop)) {
+          $('.selectors').css({
+            "margin-top" : scroll - offset + "px"
+          });
+        }else if (scroll < offset) {
+          $('.selectors').css({
+            "margin-top" : 0 + "px"
+          });
+        }
     });
-  </script>  
 
-
-  <script type="text/javascript">
   	var $container = $('#container');
   	// init
   	$container.isotope({
