@@ -7,12 +7,80 @@ body{
     src: url(neutra.ttf);
 }
 
-
-.left-help{
-  padding-right: 20px;
-  min-height: 800px;
-  border-right: solid 1px black;
+.sample-selection{
+	padding: 0 0;
 }
+.left-help{
+  min-height: 800px;
+  border-right: solid 1px rgba(0,0,0,0.14902);
+  border-left: solid 1px rgba(0,0,0,0.14902);
+  padding: 0 0 0 0;
+  background: white;
+}
+.left-help-header{
+	margin: 0 0 0 0;
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(240, 240, 240));
+	border-bottom: solid 1px rgba(0,0,0,0.14902);
+}
+.left-help-header .help-title{
+	font-size: 1.3em;
+	margin: 5px 0;
+	padding: 0 0 0 0;
+	color: rgb(150,150,150);
+	text-align: center;
+}
+.help-indicator{
+	width: 300px;
+	margin: 10px auto 10px auto;
+}
+.carousel-indicators{
+	position: static;
+	margin: auto;
+}
+.carousel-indicators li{
+    border: 1px solid rgba(0,0,0,0.3);
+    text-indent: inherit;
+}
+.carousel-indicators .active{
+    border: 1px solid rgba(0,0,0,0.3);
+    background: rgba(85,85,85,0.5);
+}
+.help-wrapper{
+	margin: 5px 0 0 0;
+	padding: 20px 0px;
+}
+
+.help-content{
+	padding: 0 30px;
+}
+.technical{
+	background: rgb(240, 250, 255);
+	padding-bottom: 10px;
+	margin-top: 50px;
+	border-top: solid 1px rgb(197, 223, 234);
+	border-bottom: solid 1px rgb(197, 223, 234);
+}
+.technical-header{
+	margin: auto;
+	height: 32px;
+	position: relative;
+	top: -16px;
+}
+.technical-header-center{
+	background: white;
+	border: solid 1px rgb(197, 223, 234);
+	width: 150px;
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+	height: 32px;
+	padding-top: 4px; 
+}
+.technical-content{
+	padding: 0 30px;
+}
+
+
 
 .main-selection{
 	padding-top: 10px;

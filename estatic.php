@@ -14,22 +14,40 @@
 <body>
 	<?php include "header.html" ?>
 
-	<div class='container-fluid sample-selection'>
+	<div class='container sample-selection'>
 		<div class="left-help col-md-3">
-			<div class="left-help-header row">
-				<div class="col-md-4">
-					<img src="">
-					<div class="caption"></div>
+			<div class="left-help-wrapper">
+				<div class="left-help-header row">
+					<div class="help-title">Select your sample size</div>
+					<div class="help-indicator">
+						<ol class="carousel-indicators">
+							<li data-slide-to="0" class="active"></li>
+							<li data-slide-to="1"></li>
+							<li data-slide-to="2"></li>
+							<li data-slide-to="3"></li>
+							<li data-slide-to="4"></li>
+							<li data-slide-to="5"></li>
+							<li data-slide-to="6"></li>
+						</ol>
+					</div>
 				</div>
-			</div>
-			<div class="help-wrapper">
-				<div class="help-title"> 2-Select your sample size</div>
-				<div class="help-info">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-				</div>	
-			</div>	
+				<div class="help-wrapper">
+					
+					<div class="help-content">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</div>
+					<div class="technical">
+						<div class="technical-header">
+							<div class="technical-header-center">Technical Info</div>
+						</div>
+						<div class="technical-content">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						</div>
+					</div>	
+				</div>
+			</div>		
 		</div>
-		<div class="main-selection col-md-6">
+		<div class="main-selection col-md-9">
 			<div class="selection active">
 				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Number of Creative executions</span>
 				<div class="user-select execution">
@@ -171,7 +189,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="right-info col-md-3"></div>
 	</div>	
 
 	<?php include ("footer.html") ?>
@@ -186,6 +203,23 @@
 			$('.selection.active').removeClass('active');
 			$(this).addClass('active');
 		});
+
+		// $(window).scroll(function() {
+	 //        scroll = $(document).scrollTop();
+	 //        offset = $('.sample-selection').offset().top;
+	 //        store_height = $('.sample-selection').height();
+	 //        sel_height = $('.left-help-wrapper').height();
+	 //        scroll_stop = offset + store_height - sel_height;
+	 //        if ((scroll >= offset) && (scroll <= scroll_stop)) {
+	 //          $('.left-help-wrapper').css({
+	 //            "margin-top" : scroll - offset + "px"
+	 //          });
+	 //        }else if (scroll < offset) {
+	 //          $('.left-help-wrapper').css({
+	 //            "margin-top" : 0 + "px"
+	 //          });
+	 //        }
+  //   	});
 	</script>
 	<script src="js/header.js"></script>
 	<script data-cfasync="false" type='text/javascript' src="js/olark.js"></script>
