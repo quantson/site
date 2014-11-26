@@ -18,21 +18,15 @@
 		<div class="left-help col-md-3">
 			<div class="left-help-wrapper">
 				<div class="left-help-header row">
-					<div class="help-title">Select your sample size</div>
-					<div class="help-indicator">
-						<ol class="carousel-indicators">
-							<li data-slide-to="0" class="active"></li>
-							<li data-slide-to="1"></li>
-							<li data-slide-to="2"></li>
-							<li data-slide-to="3"></li>
-							<li data-slide-to="4"></li>
-							<li data-slide-to="5"></li>
-							<li data-slide-to="6"></li>
-						</ol>
-					</div>
+					<div class="help-title active" question="0">Select your number of executions</div>
+					<div class="help-title" question="1">Select your sample size</div>
+					<div class="help-title" question="2">Select your country</div>
+					<div class="help-title" question="3">Select your region</div>
+					<div class="help-title" question="4">Select your target group</div>
+					<div class="help-title" question="5">Select your age range</div>
+					<div class="help-title" question="6">Select your gender</div>
 				</div>
 				<div class="help-wrapper">
-					
 					<div class="help-content">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 					</div>
@@ -47,10 +41,13 @@
 				</div>
 			</div>		
 		</div>
-		<div class="main-selection col-md-9">
-			<div class="selection active">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Number of Creative executions</span>
-				<div class="user-select execution">
+		<div class="main-selection col-md-8">
+			<div class="selection active" question="0">
+				<span class="selection-title">Number of Creative executions</span>
+				<div class="selector-wrapper">
+					<div class="selector active"></div>
+				</div>
+				<div class="user-select addmargin">
 					<div class="form-group">
 						<label class="radio-inline" for="execution_number-0">
 						  <input type="radio" name="execution_number" id="execution_number-0" value="1" checked="checked">
@@ -75,14 +72,20 @@
 					</div>	
 				</div>
 			</div>
-			<div class="selection">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Sample Size</span>
+			<div class="selection" question="1">
+				<span class="selection-title" >Sample Size</span>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
 				<div class="user-select">
 					<input id="sample-size" data-slider-id='sample-size' type="text" data-slider-min="100" data-slider-max="1000" data-slider-step="50" data-slider-value="150"/>
 				</div>
 			</div>
-			<div class="selection">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Country</span>
+			<div class="selection" question="2">
+				<span class="selection-title">Country</span>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
 				<div class="user-select country">
 					<div class="form-group">
 					  	<div class="col-md-4">
@@ -96,9 +99,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="selection">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Regions</span>
-				<div class="user-select">
+			<div class="selection" question="3">
+				<span class="selection-title">Regions</span>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
+				<div class="user-select addmargin">
 					<div class="form-group region-box">
 					  	<div class="checkbox">
 					    	<label for="regions-0">
@@ -127,8 +133,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="selection">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Target Group</span>
+			<div class="selection" question="4">
+				<span class="selection-title">Target Group</span>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
 				<div class="user-select target-group">
 					<div class="form-group">
 						<div class="col-md-4">
@@ -142,9 +151,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="selection">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Age</span>
-				<div class="user-select age">
+			<div class="selection" question="5">
+				<span class="selection-title">Age</span>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
+				<div class="user-select addmargin">
 					<div class="form-group">
 					    <label class="checkbox-inline" for="checkboxes-0">
 					      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
@@ -169,9 +181,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="selection">
-				<span class="glyphicon glyphicon-play"></span><span class="selection-title">Gender</span>
-				<div class="user-select gender">
+			<div class="selection" question="6">
+				<span class="selection-title">Gender</span>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
+				<div class="user-select addmargin">
 					<div class="form-group"> 						 
 					    <label class="radio-inline" for="gender-0">
 					      <input type="radio" name="gender" id="gender-0" value="1">
@@ -199,27 +214,41 @@
 			tooltip: 'always'
 		});
 
-		$('.selection').click(function(){
+
+		changeactive = function(activetrig){
+			var active_id = parseInt($('.selection.active').attr('question'),10);
+			if(activetrig == active_id){return;}
 			$('.selection.active').removeClass('active');
-			$(this).addClass('active');
+			$('.selection[question="' + activetrig + '"]').addClass('active');
+			$('.left-help .active').stop().removeClass('active').hide();
+			$('.left-help [question="'+ activetrig +'"]').addClass('active').fadeIn('fast');
+
+		}
+
+		$('.selection').mousedown(function(){
+			var num = parseInt($(this).attr('question'),10);
+			changeactive(num);
 		});
 
-		// $(window).scroll(function() {
-	 //        scroll = $(document).scrollTop();
-	 //        offset = $('.sample-selection').offset().top;
-	 //        store_height = $('.sample-selection').height();
-	 //        sel_height = $('.left-help-wrapper').height();
-	 //        scroll_stop = offset + store_height - sel_height;
-	 //        if ((scroll >= offset) && (scroll <= scroll_stop)) {
-	 //          $('.left-help-wrapper').css({
-	 //            "margin-top" : scroll - offset + "px"
-	 //          });
-	 //        }else if (scroll < offset) {
-	 //          $('.left-help-wrapper').css({
-	 //            "margin-top" : 0 + "px"
-	 //          });
-	 //        }
-  //   	});
+
+
+
+		$(window).scroll(function() {
+	        scroll = $(document).scrollTop();
+	        offset = $('.sample-selection').offset().top;
+	        store_height = $('.sample-selection').height();
+	        sel_height = $('.left-help-wrapper').height();
+	        scroll_stop = offset + store_height - sel_height;
+	        if ((scroll >= offset) && (scroll <= scroll_stop)) {
+	          $('.left-help-wrapper').css({
+	            "margin-top" : scroll - offset + "px"
+	          });
+	        }else if (scroll < offset) {
+	          $('.left-help-wrapper').css({
+	            "margin-top" : 0 + "px"
+	          });
+	        }
+    	});
 	</script>
 	<script src="js/header.js"></script>
 	<script data-cfasync="false" type='text/javascript' src="js/olark.js"></script>

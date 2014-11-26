@@ -75,6 +75,7 @@
   color: #F8F8F8;
 }
 .dropdown-menu.dropdown-products{
+  z-index: 1080;
   background-color: rgba(34,34,34,0.95);
   width: 700px;
   border-radius: 0;

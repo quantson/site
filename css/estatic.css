@@ -29,21 +29,8 @@ body{
 	color: rgb(150,150,150);
 	text-align: center;
 }
-.help-indicator{
-	width: 300px;
-	margin: 10px auto 10px auto;
-}
-.carousel-indicators{
-	position: static;
-	margin: auto;
-}
-.carousel-indicators li{
-    border: 1px solid rgba(0,0,0,0.3);
-    text-indent: inherit;
-}
-.carousel-indicators .active{
-    border: 1px solid rgba(0,0,0,0.3);
-    background: rgba(85,85,85,0.5);
+.help-title:not(.active){
+	display: none;
 }
 .help-wrapper{
 	margin: 5px 0 0 0;
@@ -83,23 +70,52 @@ body{
 
 
 .main-selection{
-	padding-top: 10px;
+	margin: 10px 0 0 25px;
+	padding: 0 0;
+	border-left: solid 2px rgba(0,0,0,0.4);
+}
+.selector-wrapper{
+	position: relative;
+	display: inline-block;
+	top: 1em;
+	left: -2px;
+	width: 12px;
+    height: 21px;
+    background-color: #F8F8F8;
+    border-bottom-right-radius: 21px;
+    border-top-right-radius: 21px;
+    border: 2px solid rgba(0,0,0,0.4);
+    border-left: 0;
+    float: left;
+}
+.selector{
+	position: relative;
+	left: -7px;
+	top: 1px;
+	width: 15px;
+    height: 15px;
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    border: 2px solid rgba(0,0,0,0.4);
+}
+.active .selector{
+	background-color: rgba(255,85,85,1);
+	border: 1px solid;
 }
 .selection{
 	padding: 10px 0 10px 0;
-	border-radius: 5px;
-	border: solid 1px transparent;
+	min-height: 90px;
 }
 .selection.active{
-	border-radius: 5px;
-	border: solid 1px orange;
+	background: rgba(0,0,0,0.1);
 }
 .selection-title{
-	padding-left: 10px;
+	padding-left: 20px;
 	font-size: 1.5em;
 }
 .user-select{
-	padding: 10px 0 0 0;
+	position: relative;
+	padding-left: 20px;
 }
 .form-group{
 	margin-bottom: 0;
@@ -110,21 +126,14 @@ body{
 .slider .slider-selection {
 	background: #BABABA;
 }
-.country{
-	margin-bottom: 30px;
+.tooltip{
+	z-index: 100;
 }
-.region-box{
-	margin-left: 20px;
+.addmargin{
+	margin-left: 10px;
 }
-.target-group{
-	margin-bottom: 30px;
-}
-.age, .gender, .execution{
-	margin-left: 25px;
-}
-
-.right-info{
-  padding-right: 20px;
-  min-height: 800px;
-  border-left: solid 1px black;
+.form-group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
