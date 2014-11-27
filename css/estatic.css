@@ -11,7 +11,7 @@ body{
 	padding: 0 0;
 }
 .left-help{
-  min-height: 750px;
+  min-height: 800px;
   border-right: solid 1px rgba(0,0,0,0.14902);
   border-left: solid 1px rgba(0,0,0,0.14902);
   padding: 0 0 0 0;
@@ -24,7 +24,7 @@ body{
 }
 .left-help-header .help-title{
 	font-size: 1.3em;
-	margin: 10px 0;
+	margin: 5px 0;
 	padding: 0 0 0 0;
 	color: rgb(150,150,150);
 	text-align: center;
@@ -106,11 +106,8 @@ body{
 	padding: 10px 0 10px 0;
 	min-height: 90px;
 }
-.selection *{
-	z-index: 100;
-}
 .selection.active{
-	/*background: rgba(0,0,0,0.1);*/
+	background: rgba(0,0,0,0.1);
 }
 .selection-title{
 	padding-left: 20px;
@@ -130,7 +127,7 @@ body{
 	background: #BABABA;
 }
 .tooltip{
-	z-index: 900;
+	z-index: 100;
 }
 .addmargin{
 	margin-left: 10px;
@@ -139,13 +136,4 @@ body{
   content: "";
   display: table;
   clear: both;
-}
-
-#magic-line{ 
-	position: absolute; 
-	top: 0; 
-	left: 0;  
-	background: rgba(0,0,0,0.1); 
-	z-index: 10;
-	min-height: 80px; 
 }

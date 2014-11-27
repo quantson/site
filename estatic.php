@@ -41,7 +41,7 @@
 				</div>
 			</div>		
 		</div>
-		<div class="main-selection col-md-7">
+		<div class="main-selection col-md-8">
 			<div class="selection active" question="0">
 				<span class="selection-title">Number of Creative executions</span>
 				<div class="selector-wrapper">
@@ -231,6 +231,8 @@
 		});
 
 
+
+
 		$(window).scroll(function() {
 	        scroll = $(document).scrollTop();
 	        offset = $('.sample-selection').offset().top;
@@ -247,34 +249,6 @@
 	          });
 	        }
     	});
-
-	
-
-	$(function() {
-		var $el, topPos, newHeight;
-
-	   	$(".main-selection").append("<div id='magic-line'></div>");
-	    
-	    var $magicLine = $("#magic-line");
-	    
-	    $magicLine
-	        .width($(".main-selection").width())
-	        .height($(".main-selection .active").outerHeight())
-	        .css("top", $(".main-selection .active").position().top)
-	        .data("origTop", $(".main-selection .active").position().top)
-	        .data("origHeight", $magicLine.outerHeight());
-	                
-	    $(".main-selection div").mousedown(function() {
-	        $el = $(this);
-	        topPos = $el.position().top;
-	        newHeight = $el.outerHeight();
-	        $magicLine.stop().animate({
-	            top: topPos,
-	            height: newHeight,
-	        })  
-	    });
-	});
-
 	</script>
 	<script src="js/header.js"></script>
 	<script data-cfasync="false" type='text/javascript' src="js/olark.js"></script>
