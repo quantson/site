@@ -11,7 +11,7 @@ body{
 	padding: 0 0;
 }
 .left-help{
-  min-height: 750px;
+  min-height: 800px;
   border-right: solid 1px rgba(0,0,0,0.14902);
   border-left: solid 1px rgba(0,0,0,0.14902);
   padding: 0 0 0 0;
@@ -72,12 +72,25 @@ body{
 .main-selection{
 	margin: 10px 0 0 25px;
 	padding: 0 0;
-	border-left: solid 2px rgba(0,0,0,0.4);
+	/*border-left: solid 2px rgba(0,0,0,0.4);*/
+}
+.product{
+	height: 100px;
+	border: solid 1px rgba(0,0,0,0.4);
+	border-radius: 5px;
+	margin: 10px 10px;
+}
+.product img{
+	height: 90px;
+	display: inline-block;
+}
+.product div{
+	display: inline-block;
 }
 .selector-wrapper{
 	position: relative;
 	display: inline-block;
-	top: 1em;
+	top: 0;
 	left: -2px;
 	width: 12px;
     height: 21px;
@@ -100,19 +113,22 @@ body{
 }
 .active .selector{
 	background-color: rgba(255,85,85,1);
-	border: 1px solid;
+	border: 1px solid rgba(0,0,0,0.4);
 }
 .selection{
 	padding: 10px 0 10px 0;
 	min-height: 90px;
+	border-left: solid 2px rgba(0,0,0,0.4);
 }
 .selection *{
-	z-index: 100;
+	z-index: 20;
+	-webkit-user-select: none;
 }
 .selection.active{
-	/*background: rgba(0,0,0,0.1);*/
+	color: white;
 }
 .selection-title{
+	position: relative;
 	padding-left: 20px;
 	font-size: 1.5em;
 }
@@ -135,17 +151,44 @@ body{
 .addmargin{
 	margin-left: 10px;
 }
-.form-group:after {
+.group:after {
   content: "";
   display: table;
   clear: both;
 }
-
 #magic-line{ 
 	position: absolute; 
 	top: 0; 
 	left: 0;  
-	background: rgba(0,0,0,0.1); 
+	background: #009DDC; 
 	z-index: 10;
 	min-height: 80px; 
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
 }
+.next-step{
+	margin: 20px 0;
+}
+
+
+.project-info{
+	margin: 10px 0 0 10px;
+	background: rgba(0,0,0,0.03);
+	padding: 5px 0;
+}
+.price{
+	border-right: solid 1px rgba(0,0,0,0.3);
+}
+.project-info span{
+	font-size: 2.3em;
+}
+.price-symbol{
+	color: #63CDF5;
+}
+.price-tooltip{
+	position: relative;
+	top: -5px;
+	font-size: 0.9em;
+	text-align: center;
+}
+

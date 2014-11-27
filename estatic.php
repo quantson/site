@@ -41,14 +41,18 @@
 				</div>
 			</div>		
 		</div>
-		<div class="main-selection col-md-7">
+		<div class="main-selection col-md-6">
+			<div class="product group">
+				<img src="image/product/impackt.png">
+				<div>Impackt lite by MMR</div>
+			</div>
 			<div class="selection active" question="0">
-				<span class="selection-title">Number of Creative executions</span>
+				<div class="selection-title">Number of Creative executions</div>
 				<div class="selector-wrapper">
 					<div class="selector active"></div>
 				</div>
 				<div class="user-select addmargin">
-					<div class="form-group">
+					<div class="form-group group">
 						<label class="radio-inline" for="execution_number-0">
 						  <input type="radio" name="execution_number" id="execution_number-0" value="1" checked="checked">
 						  1
@@ -73,7 +77,7 @@
 				</div>
 			</div>
 			<div class="selection" question="1">
-				<span class="selection-title" >Sample Size</span>
+				<div class="selection-title" >Sample Size</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
@@ -82,12 +86,12 @@
 				</div>
 			</div>
 			<div class="selection" question="2">
-				<span class="selection-title">Country</span>
+				<div class="selection-title">Country</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
 				<div class="user-select country">
-					<div class="form-group">
+					<div class="form-group group">
 					  	<div class="col-md-4">
 					    	<select id="country" name="country" class="form-control">
 					    	  <option value="1">France</option>
@@ -100,12 +104,12 @@
 				</div>
 			</div>
 			<div class="selection" question="3">
-				<span class="selection-title">Regions</span>
+				<div class="selection-title">Regions</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
 				<div class="user-select addmargin">
-					<div class="form-group region-box">
+					<div class="form-group group region-box">
 					  	<div class="checkbox">
 					    	<label for="regions-0">
 					    	  <input type="checkbox" name="regions" id="regions-0" value="1" checked>
@@ -134,13 +138,13 @@
 				</div>
 			</div>
 			<div class="selection" question="4">
-				<span class="selection-title">Target Group</span>
+				<div class="selection-title">Target Group</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
 				<div class="user-select target-group">
-					<div class="form-group">
-						<div class="col-md-4">
+					<div class="form-group group">
+						<div class="col-md-5">
 					    	<select id="target-group" name="target-group" class="form-control">
 					    	  <option value="1">General Population</option>
 					    	  <option value="2">High Income</option>
@@ -152,12 +156,12 @@
 				</div>
 			</div>
 			<div class="selection" question="5">
-				<span class="selection-title">Age</span>
+				<div class="selection-title">Age</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
 				<div class="user-select addmargin">
-					<div class="form-group">
+					<div class="form-group group">
 					    <label class="checkbox-inline" for="checkboxes-0">
 					      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
 					      18-25
@@ -182,12 +186,12 @@
 				</div>
 			</div>
 			<div class="selection" question="6">
-				<span class="selection-title">Gender</span>
+				<div class="selection-title">Gender</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
 				<div class="user-select addmargin">
-					<div class="form-group"> 						 
+					<div class="form-group group"> 						 
 					    <label class="radio-inline" for="gender-0">
 					      <input type="radio" name="gender" id="gender-0" value="1">
 					      Male
@@ -203,6 +207,23 @@
 					</div>
 				</div>
 			</div>
+			<div class="next-step col-md-3 pull-right">
+				<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span> Next Step</a>
+			</div>
+		</div>
+		<div class="col-md-2 project-info">
+			<div class="col-md-6 price">
+				<div>
+					<span class="price-symbol">£</span><span>999</span>
+				</div>
+				<div class="price-tooltip">Price</div>
+			</div>
+			<div class="col-md-6 duration">
+				<div>
+					<span>5</span><span class="price-symbol">hrs</span>
+				</div>
+				<div class="price-tooltip">Duration</div>
+			</div>
 		</div>
 	</div>	
 
@@ -214,66 +235,69 @@
 			tooltip: 'always'
 		});
 
-
-		changeactive = function(activetrig){
-			var active_id = parseInt($('.selection.active').attr('question'),10);
-			if(activetrig == active_id){return;}
-			$('.selection.active').removeClass('active');
-			$('.selection[question="' + activetrig + '"]').addClass('active');
-			$('.left-help .active').stop().removeClass('active').hide();
-			$('.left-help [question="'+ activetrig +'"]').addClass('active').fadeIn('fast');
-
-		}
-
-		$('.selection').mousedown(function(){
-			var num = parseInt($(this).attr('question'),10);
-			changeactive(num);
-		});
-
-
-		$(window).scroll(function() {
+		scroll_follow = function(item) {
 	        scroll = $(document).scrollTop();
 	        offset = $('.sample-selection').offset().top;
 	        store_height = $('.sample-selection').height();
-	        sel_height = $('.left-help-wrapper').height();
+	        sel_height = item.height();
 	        scroll_stop = offset + store_height - sel_height;
 	        if ((scroll >= offset) && (scroll <= scroll_stop)) {
-	          $('.left-help-wrapper').css({
-	            "margin-top" : scroll - offset + "px"
+	          item.css({
+	            "margin-top" : ""
+	          }).css({
+	            "margin-top" : "+=" + (scroll - offset) + "px"
 	          });
 	        }else if (scroll < offset) {
-	          $('.left-help-wrapper').css({
-	            "margin-top" : 0 + "px"
+	          item.css({
+	            "margin-top" : ""
 	          });
 	        }
-    	});
+    	};
 
+		$(window).scroll(function(){
+			scroll_follow($('.left-help-wrapper'));
+			scroll_follow($('.project-info'));
+		});
 	
 
-	$(function() {
-		var $el, topPos, newHeight;
 
-	   	$(".main-selection").append("<div id='magic-line'></div>");
-	    
-	    var $magicLine = $("#magic-line");
-	    
-	    $magicLine
-	        .width($(".main-selection").width())
-	        .height($(".main-selection .active").outerHeight())
-	        .css("top", $(".main-selection .active").position().top)
-	        .data("origTop", $(".main-selection .active").position().top)
-	        .data("origHeight", $magicLine.outerHeight());
-	                
-	    $(".main-selection div").mousedown(function() {
-	        $el = $(this);
-	        topPos = $el.position().top;
-	        newHeight = $el.outerHeight();
-	        $magicLine.stop().animate({
-	            top: topPos,
-	            height: newHeight,
-	        })  
-	    });
-	});
+		var changeactive = function(activetrig){
+			$('.selection.active').removeClass('active');
+			$('.selection[question="' + activetrig + '"]').addClass('active');
+			$('.selection.active').css({'color':'white'});
+			$('.left-help .active').stop().removeClass('active').hide();
+			$('.left-help [question="'+ activetrig +'"]').addClass('active').fadeIn('fast');
+		}
+
+		$(function() {
+			var $el, topPos, newHeight;
+
+		   	$(".main-selection").append("<div id='magic-line'></div>");
+		    
+		    var $magicLine = $("#magic-line");
+		    
+		    $magicLine
+		        .width($(".main-selection").width())
+		        .height($(".main-selection .active").outerHeight())
+		        .css("top", $(".main-selection .active").position().top)
+		        .data("origTop", $(".main-selection .active").position().top)
+		        .data("origHeight", $magicLine.outerHeight());
+		                
+		    $(".main-selection .selection").mousedown(function() {
+		        $el = $(this);
+		        var num = parseInt($el.attr('question'),10);
+				if($el.hasClass('active')){return;}
+		        topPos = $el.position().top;
+		        newHeight = $el.outerHeight();
+		        $('.selection.active').css({'color':'black'});
+		        $magicLine.stop().animate({
+		            top: topPos,
+		            height: newHeight,
+		        },function(){
+				changeactive(num);
+		   		 });
+		    });	    
+		});
 
 	</script>
 	<script src="js/header.js"></script>
