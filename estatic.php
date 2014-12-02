@@ -41,11 +41,29 @@
 				</div>
 			</div>		
 		</div>
-		<div class="main-selection col-md-6">
-			<div class="product group">
-				<img src="image/product/impackt.png">
-				<div>Impackt lite by MMR</div>
-			</div>
+		<div class="main-selection col-md-7">
+			<div class="main-header group">
+				<div class="col-md-4 main-header-product">
+					<img src="image/product/impackt.png">
+					<div>Impackt Lite by MMR</div>	
+				</div>
+				<div class="col-md-8 main-header-step">
+					<div class="row">
+						<div class="col-md-4 active">
+          				  <img src="image/order/target.png">
+            				<div class="caption caption-active">Select Sample</div>
+          				</div>
+          				<div class="col-md-4">
+          				  <img src="image/order/survey.png">
+          				  <div class="caption">Configure Survey</div>
+          				</div>
+          				<div class="col-md-4">
+          				  <img src="image/order/launch.png">
+          				  <div class="caption">Launch Project</div>
+          				</div>
+          			</div>	
+				</div>
+			</div>	
 			<div class="selection active" question="0">
 				<div class="selection-title">Number of Creative executions</div>
 				<div class="selector-wrapper">
@@ -81,7 +99,7 @@
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select">
+				<div class="user-select slider">
 					<input id="sample-size" data-slider-id='sample-size' type="text" data-slider-min="100" data-slider-max="1000" data-slider-step="50" data-slider-value="150"/>
 				</div>
 			</div>
@@ -211,7 +229,7 @@
 				<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span> Next Step</a>
 			</div>
 		</div>
-		<div class="col-md-2 project-info">
+		<div class="col-md-2 pull-right project-info">
 			<div class="col-md-6 price">
 				<div>
 					<span class="price-symbol">£</span><span>999</span>
@@ -278,8 +296,8 @@
 		    
 		    $magicLine
 		        .width($(".main-selection").width())
-		        .height($(".main-selection .active").outerHeight())
-		        .css("top", $(".main-selection .active").position().top)
+		        .height($(".main-selection .selection.active").outerHeight())
+		        .css("top", $(".main-selection .selection.active").position().top)
 		        .data("origTop", $(".main-selection .active").position().top)
 		        .data("origHeight", $magicLine.outerHeight());
 		                
