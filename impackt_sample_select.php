@@ -14,30 +14,6 @@
 <body>
 	<?php include "header.html" ?>
 
-	<div class="main-header container">
-		<div class="row">
-			<div class="col-md-3 main-header-product">
-				<img src="image/product/impackt.png">
-				<div>Impackt Lite by MMR</div>	
-			</div>
-			<div class="col-md-offset-1 col-md-6 main-header-step">
-				<div class="row">
-					<div class="col-md-4 active">
-          			  <img src="image/order/target.png">
-           				<div class="caption caption-active">Select Sample</div>
-          			</div>
-          			<div class="col-md-4">
-          			  <img src="image/order/survey.png">
-          			  <div class="caption">Configure Survey</div>
-          			</div>
-          			<div class="col-md-4">
-          			  <img src="image/order/launch.png">
-          			  <div class="caption">Launch Project</div>
-          			</div>
-          		</div>	
-			</div>
-		</div>	
-	</div>		
 	<div class='container sample-selection'>
 		<div class="left-help col-md-3">
 			<div class="left-help-wrapper">
@@ -66,6 +42,28 @@
 			</div>		
 		</div>
 		<div class="main-selection col-md-7">
+			<div class="main-header group">
+				<div class="col-md-4 main-header-product">
+					<img src="image/product/impackt.png">
+					<div>Impackt Lite by MMR</div>	
+				</div>
+				<div class="col-md-8 main-header-step">
+					<div class="row">
+						<div class="col-md-4 active">
+          				  <img src="image/order/target.png">
+            				<div class="caption caption-active">Select Sample</div>
+          				</div>
+          				<div class="col-md-4">
+          				  <img src="image/order/survey.png">
+          				  <div class="caption">Configure Survey</div>
+          				</div>
+          				<div class="col-md-4">
+          				  <img src="image/order/launch.png">
+          				  <div class="caption">Launch Project</div>
+          				</div>
+          			</div>	
+				</div>
+			</div>	
 			<div class="selection active" question="0">
 				<div class="selection-title">Number of Creative executions</div>
 				<div class="selector-wrapper">
