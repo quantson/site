@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title> ZappiStore | The Future of Market Research</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/estatic.css" rel="stylesheet">
+	<link href="css/impackt_sample_select.css" rel="stylesheet">
 	<link href="css/header.css" rel="stylesheet">
 	<link href="css/slider.css" rel="stylesheet">
 	<script src="js/jquery.js"></script>
@@ -14,6 +14,30 @@
 <body>
 	<?php include "header.html" ?>
 
+	<div class="main-header container">
+		<div class="row">
+			<div class="col-md-3 main-header-product">
+				<img src="image/product/impackt.png">
+				<div>Impackt Lite by MMR</div>	
+			</div>
+			<div class="col-md-offset-1 col-md-6 main-header-step">
+				<div class="row">
+					<div class="col-md-4 active">
+          			  <img src="image/order/target.png">
+           				<div class="caption caption-active">Select Sample</div>
+          			</div>
+          			<div class="col-md-4">
+          			  <img src="image/order/survey.png">
+          			  <div class="caption">Configure Survey</div>
+          			</div>
+          			<div class="col-md-4">
+          			  <img src="image/order/launch.png">
+          			  <div class="caption">Launch Project</div>
+          			</div>
+          		</div>	
+			</div>
+		</div>	
+	</div>		
 	<div class='container sample-selection'>
 		<div class="left-help col-md-3">
 			<div class="left-help-wrapper">
@@ -42,28 +66,6 @@
 			</div>		
 		</div>
 		<div class="main-selection col-md-7">
-			<div class="main-header group">
-				<div class="col-md-4 main-header-product">
-					<img src="image/product/impackt.png">
-					<div>Impackt Lite by MMR</div>	
-				</div>
-				<div class="col-md-8 main-header-step">
-					<div class="row">
-						<div class="col-md-4 active">
-          				  <img src="image/order/target.png">
-            				<div class="caption caption-active">Select Sample</div>
-          				</div>
-          				<div class="col-md-4">
-          				  <img src="image/order/survey.png">
-          				  <div class="caption">Configure Survey</div>
-          				</div>
-          				<div class="col-md-4">
-          				  <img src="image/order/launch.png">
-          				  <div class="caption">Launch Project</div>
-          				</div>
-          			</div>	
-				</div>
-			</div>	
 			<div class="selection active" question="0">
 				<div class="selection-title">Number of Creative executions</div>
 				<div class="selector-wrapper">
@@ -226,7 +228,7 @@
 				</div>
 			</div>
 			<div class="next-step col-md-3 pull-right">
-				<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span> Next Step</a>
+				<a href="impackt_product_conf.php" class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span> Next Step</a>
 			</div>
 		</div>
 		<div class="col-md-2 pull-right project-info">
@@ -248,6 +250,8 @@
 	<?php include ("footer.html") ?>
 
 	<script src="js/slider.js"></script>
+	<script src="js/header.js"></script>
+	<script data-cfasync="false" type='text/javascript' src="js/olark.js"></script>
 	<script>
 		$("#sample-size").slider({
 			tooltip: 'always'
@@ -287,7 +291,7 @@
 			$('.left-help [question="'+ activetrig +'"]').addClass('active').fadeIn('fast');
 		}
 
-		$(function() {
+		$(window).load(function() {
 			var $el, topPos, newHeight;
 
 		   	$(".main-selection").append("<div id='magic-line'></div>");
@@ -296,7 +300,7 @@
 		    
 		    $magicLine
 		        .width($(".main-selection").width())
-		        .height($(".main-selection .selection.active").outerHeight())
+		        .height($(".selection.active").outerHeight())
 		        .css("top", $(".main-selection .selection.active").position().top)
 		        .data("origTop", $(".main-selection .active").position().top)
 		        .data("origHeight", $magicLine.outerHeight());
@@ -318,6 +322,4 @@
 		});
 
 	</script>
-	<script src="js/header.js"></script>
-	<script data-cfasync="false" type='text/javascript' src="js/olark.js"></script>
 </body>

@@ -180,7 +180,7 @@ body{
 }
 #magic-line{ 
 	position: absolute; 
-	top: 0; 
+	top: 154px; 
 	left: 2px;  
 	background: rgba(0, 157, 220, 0.9); 
 	z-index: 10;
@@ -214,4 +214,3 @@ body{
 	font-size: 0.9em;
 	text-align: center;
 }
-
