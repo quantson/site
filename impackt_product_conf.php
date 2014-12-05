@@ -41,13 +41,13 @@
 				</div>
 			</div>		
 		</div>
-		<div class="main-selection col-md-7">
+		<div class="main-selection col-md-9">
 			<div class="main-header group">
-				<div class="col-md-4 main-header-product">
+				<div class="col-md-3 main-header-product">
 					<img src="image/product/impackt.png">
 					<div>Impackt Lite by MMR</div>	
 				</div>
-				<div class="col-md-8 main-header-step">
+				<div class="col-md-6 main-header-step">
 					<div class="row">
 						<div class="col-md-4">
           				  <img src="image/order/target.png">
@@ -63,114 +63,103 @@
           				</div>
           			</div>	
 				</div>
+				<div class="col-md-3 pull-right project-info">
+					<div class="col-md-6 price">
+						<div>
+							<span class="price-symbol">£</span><span>999</span>
+						</div>
+						<div class="price-tooltip">Price</div>
+					</div>
+					<div class="col-md-6 duration">
+						<div>
+							<span>5</span><span class="price-symbol">hrs</span>
+						</div>
+						<div class="price-tooltip">Duration</div>
+					</div>
+				</div>
 			</div>	
-			<div class="selection active" question="0">
-				<div class="selection-title">Number of Creative executions</div>
+			<div class="selection active product-select" question="0">
+				<div class="selection-title">Add and upload up to 5 creatives</div>
 				<div class="selector-wrapper">
 					<div class="selector active"></div>
 				</div>
-				<div class="user-select addmargin">
+				<div class="user-select">
 					<div class="form-group group">
-						<label class="radio-inline" for="execution_number-0">
-						  <input type="radio" name="execution_number" id="execution_number-0" value="1" checked="checked">
-						  1
-						</label> 
-						<label class="radio-inline" for="execution_number-1">
-						  <input type="radio" name="execution_number" id="execution_number-1" value="2">
-						  2
-						</label> 
-						<label class="radio-inline" for="execution_number-2">
-						  <input type="radio" name="execution_number" id="execution_number-2" value="3">
-						  3
-						</label> 
-						<label class="radio-inline" for="execution_number-3">
-						  <input type="radio" name="execution_number" id="execution_number-3" value="4">
-						  4
-						</label> 
-						<label class="radio-inline" for="execution_number-4">
-						  <input type="radio" name="execution_number" id="execution_number-4" value="5">
-						  5
-						</label>
+						<div class="square upload added" cell="1">
+							<span class="glyphicon glyphicon-open icon-center"></span>
+						</div>
+						<div class="square upload" cell="2">
+							<span class="glyphicon glyphicon-plus icon-center"></span>
+							<span class="glyphicon glyphicon-trash trash"></span>
+						</div>
+						<div class="square upload" cell="3">
+							<span class="glyphicon glyphicon-plus icon-center"></span>
+							<span class="glyphicon glyphicon-trash trash"></span>
+						</div>
+						<div class="square upload" cell="4">
+							<span class="glyphicon glyphicon-plus icon-center"></span>
+							<span class="glyphicon glyphicon-trash trash"></span>
+						</div>
+						<div class="square upload" cell="5">
+							<span class="glyphicon glyphicon-plus icon-center"></span>
+							<span class="glyphicon glyphicon-trash trash"></span>
+						</div>
 					</div>	
 				</div>
 			</div>
-			<div class="selection" question="1">
-				<div class="selection-title" >Sample Size</div>
+			<div class="selection product-conf product-conf-top" question="1">
+				<div class="product-conf-header">
+					<div class="product-conf-header-center">Product Configuration</div>
+				</div>
+				<div class="selection-title" >Pack Name</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select slider">
-					<input id="sample-size" data-slider-id='sample-size' type="text" data-slider-min="100" data-slider-max="1000" data-slider-step="50" data-slider-value="150"/>
+				<div class="user-select input-group-sm five group">
+					<input name="textinput" type="text" placeholder="ex: Red Pack" class="form-control">
+					<input name="textinput" type="text" placeholder="ex: Yellow Pack" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Green Pack" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Blue Pack" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Purple Pack" class="form-control " disabled>
 				</div>
 			</div>
-			<div class="selection" question="2">
-				<div class="selection-title">Country</div>
+			<div class="selection product-conf" question="2">
+				<div class="selection-title">Brand Name</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select country">
-					<div class="form-group group">
-					  	<div class="col-md-4">
-					    	<select id="country" name="country" class="form-control">
-					    	  <option value="1">France</option>
-					    	  <option value="2">United-Kingdom</option>
-					    	  <option value="3">United-States</option>
-					    	  <option value="4">Burkina-Fasso</option>
-					    	</select>
-					  </div>
-					</div>
+				<div class="user-select input-group-sm five group">
+					<input name="textinput" type="text" placeholder="ex: Cadbury" class="form-control">
+					<input name="textinput" type="text" placeholder="ex: Cadbury" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Cadbury" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Cadbury" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Cadbury" class="form-control " disabled>
 				</div>
 			</div>
-			<div class="selection" question="3">
-				<div class="selection-title">Regions</div>
+			<div class="selection product-conf" question="3">
+				<div class="selection-title">Product Name</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select addmargin">
-					<div class="form-group group region-box">
-					  	<div class="checkbox">
-					    	<label for="regions-0">
-					    	  <input type="checkbox" name="regions" id="regions-0" value="1" checked>
-					    	  Bourgogne, Auvergne, Limousin
-					    	</label>
-						</div>
-					  	<div class="checkbox">
-					    	<label for="regions-1">
-					    	  <input type="checkbox" name="regions" id="regions-1" value="2" checked>
-					    	  Ile-de-France / Region Parisienne
-					    	</label>
-						</div>
-					  	<div class="checkbox">
-					    	<label for="regions-2">
-					    	  <input type="checkbox" name="regions" id="regions-2" value="3" checked>
-					    	  Nord-Pas-de-Calais, Picardie
-					    	</label>
-						</div>
-					  	<div class="checkbox">
-					    	<label for="regions-3">
-					    	  <input type="checkbox" name="regions" id="regions-3" value="4" checked>
-					    	  Rhone-Alpes, Franche-Comte
-					    	</label>
-						</div>
-					</div>
+				<div class="user-select input-group-sm five group">
+					<input name="textinput" type="text" placeholder="ex: Cadbury Daily Milk" class="form-control">
+					<input name="textinput" type="text" placeholder="ex: Cadbury Daily Milk" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Cadbury Daily Milk" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Cadbury Daily Milk" class="form-control " disabled>
+					<input name="textinput" type="text" placeholder="ex: Cadbury Daily Milk" class="form-control " disabled>
 				</div>
 			</div>
-			<div class="selection" question="4">
-				<div class="selection-title">Target Group</div>
+			<div class="selection product-conf" question="4">
+				<div class="selection-title">Category</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select target-group">
-					<div class="form-group group">
-						<div class="col-md-5">
-					    	<select id="target-group" name="target-group" class="form-control">
-					    	  <option value="1">General Population</option>
-					    	  <option value="2">High Income</option>
-					    	  <option value="3">Low Income</option>
-					    	  <option value="4">No idea</option>
-					    	</select>
-					    </div>
-					</div>
+				<div class="user-select input-group-sm five group">
+					<input name="textinput" type="text" placeholder="ex: Chocolate" class="form-control">
+					<input name="textinput" type="text" placeholder="ex: Chocolate" class="form-control" disabled>
+					<input name="textinput" type="text" placeholder="ex: Chocolate" class="form-control" disabled>
+					<input name="textinput" type="text" placeholder="ex: Chocolate" class="form-control" disabled>
+					<input name="textinput" type="text" placeholder="ex: Chocolate" class="form-control" disabled>
 				</div>
 			</div>
 			<div class="selection" question="5">
@@ -227,21 +216,7 @@
 			</div>
 			<div class="next-step col-md-3 pull-right">
 				<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span> Next Step</a>
-			</div>
-		</div>
-		<div class="col-md-2 pull-right project-info">
-			<div class="col-md-6 price">
-				<div>
-					<span class="price-symbol">£</span><span>999</span>
-				</div>
-				<div class="price-tooltip">Price</div>
-			</div>
-			<div class="col-md-6 duration">
-				<div>
-					<span>5</span><span class="price-symbol">hrs</span>
-				</div>
-				<div class="price-tooltip">Duration</div>
-			</div>
+			</div>	
 		</div>
 	</div>	
 
@@ -276,7 +251,7 @@
 
 		$(window).scroll(function(){
 			scroll_follow($('.left-help-wrapper'));
-			scroll_follow($('.project-info'));
+			// scroll_follow($('.project-info'));
 		});
 	
 
@@ -318,6 +293,16 @@
 		   		 });
 		    });	    
 		});
+	
+	$('.square:not(.added)').click(function(){
+		$(this).addClass('added');
+		$(this).find('.icon-center').removeClass('glyphicon-plus').addClass('glyphicon-open');
+	});
+
+	$('.trash').click(function(){
+		$(this).prev().removeClass('glyphicon-open').addClass('glyphicon-plus');
+		$(this).parent().removeClass('added');
+	});
 
 	</script>
 </body>
