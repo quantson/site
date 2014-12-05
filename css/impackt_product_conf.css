@@ -19,11 +19,12 @@ body{
 }
 .left-help-header{
 	margin: 0 0 0 0;
+	padding: 4px 0;
 	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(240, 240, 240));
 	border-bottom: solid 1px rgba(0,0,0,0.14902);
 }
 .left-help-header .help-title{
-	font-size: 1.3em;
+	font-size: 1.2em;
 	margin: 10px 0;
 	padding: 0 0 0 0;
 	color: rgb(150,150,150);
@@ -98,13 +99,15 @@ body{
 .main-header-step .active img{
 	opacity: 1;
 }
-.main-header-step .active .caption{
-	font-weight: bold;
-}
 .main-header-step .caption{
 	margin: 5px 0; 
 	font-size: 0.9em;
 	text-align: center;
+	opacity: 0.5;
+}
+.main-header-step .active .caption{
+	opacity: 1;
+	font-weight: bold;
 }
 .selector-wrapper{
 	position: relative;
