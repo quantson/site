@@ -197,8 +197,10 @@ body{
 	font-size: 3em;
 	display: block;
 	margin: 31% 35%;
+	cursor: pointer;
 }
 .square .trash{
+	display: none;
 	position: absolute;
 	top: -15px;
 	right: -15px;
@@ -211,7 +213,7 @@ body{
     text-align: center;
     vertical-align: 10px;
     padding-top: 7px;
-    display: none;
+    cursor: pointer;
 }
 .square.added .trash{
 	display: inline;
@@ -259,7 +261,7 @@ input{
 	font-size: 0.8em !important;
 	text-overflow: ellipsis;
 }
-.five input{
+.five>input,.five div{
 	margin: 10px 2.5% 0 2.5%;
 	width: 15%;
 	float: left;

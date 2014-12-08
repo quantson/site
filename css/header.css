@@ -125,6 +125,7 @@
 }
 .dropdown-right li+li:hover{
   background: #E4F2F8 !important;
+  border-radius: 3px;
 }
 .dropdown-right ul li a:hover{
   color: black !important;

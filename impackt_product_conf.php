@@ -162,58 +162,86 @@
 					<input name="textinput" type="text" placeholder="ex: Chocolate" class="form-control" disabled>
 				</div>
 			</div>
-			<div class="selection" question="5">
-				<div class="selection-title">Age</div>
+			<div class="selection product-conf" question="5">
+				<div class="selection-title">Pack Range</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select addmargin">
-					<div class="form-group group">
-					    <label class="checkbox-inline" for="checkboxes-0">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-					      18-25
-					    </label>
-					    <label class="checkbox-inline" for="checkboxes-1">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-					      26-35
-					    </label>
-					    <label class="checkbox-inline" for="checkboxes-2">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
-					      36-45
-					    </label>
-					    <label class="checkbox-inline" for="checkboxes-3">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
-					      46-55
-					    </label>
-					    <label class="checkbox-inline" for="checkboxes-4">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
-					      56+
-					    </label>
-					</div>
+				<div class="user-select five group">
+					<div class="controls yesno">					   
+					   	<label class="radio-inline" for="radios-0">
+    						<input type="radio" name="range-cell1" id="radios-10" value="Yes">
+    						Yes
+    					</label>
+    					<label class="radio-inline" for="radios-1">
+    						<input type="radio" name="range-cell1" id="radios-1" value="No" checked="checked">
+    						No
+    					</label>
+    				</div>
+    				<div class="controls yesno">					   
+					   	<label class="radio-inline" for="radios-2">
+    						<input type="radio" name="range-cell2" id="radios-2" value="Yes" disabled>
+    						Yes
+    					</label>
+    					<label class="radio-inline" for="radios-3">
+    						<input type="radio" name="range-cell2" id="radios-3" value="No" disabled>
+    						No
+    					</label>
+    				</div>
+    				<div class="controls yesno">					   
+					   	<label class="radio-inline" for="radios-4">
+    						<input type="radio" name="range-cell3" id="radios-4" value="Yes" disabled>
+    						Yes
+    					</label>
+    					<label class="radio-inline" for="radios-5">
+    						<input type="radio" name="range-cell3" id="radios-5" value="No" disabled>
+    						No
+    					</label>
+    				</div>
+    				<div class="controls yesno">					   
+					   	<label class="radio-inline" for="radios-6">
+    						<input type="radio" name="range-cell4" id="radios-6" value="Yes" disabled>
+    						Yes
+    					</label>
+    					<label class="radio-inline" for="radios-7">
+    						<input type="radio" name="range-cell4" id="radios-7" value="No" disabled>
+    						No
+    					</label>
+    				</div>
+    				<div class="controls yesno">					   
+					   	<label class="radio-inline" for="radios-8">
+    						<input type="radio" name="range-cell5" id="radios-8" value="Yes" disabled>
+    						Yes
+    					</label>
+    					<label class="radio-inline" for="radios-9">
+    						<input type="radio" name="range-cell5" id="radios-9" value="No" disabled>
+    						No
+    					</label>
+    				</div>	
 				</div>
 			</div>
-			<div class="selection" question="6">
-				<div class="selection-title">Gender</div>
+			<div class="selection product-conf" question="6">
+				<div class="selection-title">Benchmark Pack</div>
 				<div class="selector-wrapper">
 					<div class="selector"></div>
 				</div>
-				<div class="user-select addmargin">
-					<div class="form-group group"> 						 
-					    <label class="radio-inline" for="gender-0">
-					      <input type="radio" name="gender" id="gender-0" value="1">
-					      Male
-					    </label>
-					    <label class="radio-inline" for="gender-1">
-					      <input type="radio" name="gender" id="gender-1" value="2">
-					      Female
-					    </label>
-					    <label class="radio-inline" for="gender-2">
-					      <input type="radio" name="gender" id="gender-2" value="3">
-					      Both
-					    </label>
-					</div>
-				</div>
+				<div class="user-select five group">					   
+   					<input type="radio" name="benchmark" id="radios-0" value="1">
+   					<input type="radio" name="benchmark" id="radios-0" value="2">
+   					<input type="radio" name="benchmark" id="radios-0" value="3">
+   					<input type="radio" name="benchmark" id="radios-0" value="4">
+   					<input type="radio" name="benchmark" id="radios-0" value="5">
+   				</div>	
 			</div>
+			<div class="selection product-conf-top" question="7">
+				<div class="product-conf-header">
+					<div class="product-conf-header-center">Project Configuration</div>
+				</div>
+				<div class="selection-title" >Pack Name</div>
+				<div class="selector-wrapper">
+					<div class="selector"></div>
+				</div>
+			</div>	
 			<div class="next-step col-md-3 pull-right">
 				<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span> Next Step</a>
 			</div>	
@@ -294,13 +322,13 @@
 		    });	    
 		});
 	
-	$('.square:not(.added)').click(function(){
-		$(this).addClass('added');
-		$(this).find('.icon-center').removeClass('glyphicon-plus').addClass('glyphicon-open');
+	$('.square:not(.added)>.icon-center').click(function(){
+		$(this).parent().addClass('added');
+		$(this).removeClass('glyphicon-plus').addClass('glyphicon-open');
 	});
 
-	$('.trash').click(function(){
-		$(this).prev().removeClass('glyphicon-open').addClass('glyphicon-plus');
+	$('.trash').mouseup(function(){
+		$(this).parent().find('.icon-center').removeClass('glyphicon-open').addClass('glyphicon-plus');
 		$(this).parent().removeClass('added');
 	});
 
