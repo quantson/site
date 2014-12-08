@@ -11,7 +11,7 @@ body{
 	padding: 0 0;
 }
 .left-help{
-  min-height: 1000px;
+  min-height: 1600px;
   border-right: solid 1px rgba(0,0,0,0.14902);
   border-left: solid 1px rgba(0,0,0,0.14902);
   padding: 0 0 0 0;
@@ -169,15 +169,6 @@ body{
   display: table;
   clear: both;
 }
-.product-select{
-	background: linear-gradient(
-    to right, 
-    #F8F8F8 22%, rgba(175, 209, 54, 0.1) 22%,
-    rgba(175, 209, 54, 0.1) 41%, #F8F8F8 41%,
-    #F8F8F8 61%, rgba(175, 209, 54, 0.1) 61%,
-    rgba(175, 209, 54, 0.1) 81%, #F8F8F8 81%
-  );
-}
 .square{
 	position: relative;
 	float: left;
@@ -192,6 +183,26 @@ body{
 .square.added{
 	opacity: 1;
 	color: rgb(0, 0, 0);
+}
+.square input{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: 50;
+}
+.square .imagePreview{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 20;
 }
 .square .icon-center{
 	font-size: 3em;
@@ -221,10 +232,10 @@ body{
 .product-conf{
 	background: linear-gradient(
     to right, 
-    white 22%, rgba(175, 209, 54, 0.1) 22%,
-    rgba(175, 209, 54, 0.1) 41%, white 41%,
-    white 61%, rgba(175, 209, 54, 0.1) 61%,
-    rgba(175, 209, 54, 0.1) 81%, white 81%
+    #F8F8F8 22%, rgba(175, 209, 54, 0.1) 22%,
+    rgba(175, 209, 54, 0.1) 41%, #F8F8F8 41%,
+    #F8F8F8 61%, rgba(175, 209, 54, 0.1) 61%,
+    rgba(175, 209, 54, 0.1) 81%, #F8F8F8 81%
   );
 }
 .product-conf-top{
@@ -266,11 +277,50 @@ input{
 	width: 15%;
 	float: left;
 }
-.country, .target-group{
-	margin-top: 10px;
+.four>input{
+	width: 21%;
+	margin: 10px 1% 0 1%;
+	float: left;
 }
-
-
+.form-control{
+	margin-top: 10px; 
+	padding: 0 12px;
+	color: black !important;
+	margin-left: 7px;
+	height: 30px;
+}
+.form-control option{
+	color: black !important;
+}
+.addline{
+	font-size: 2.5em;
+	margin-left: 10px;
+}
+.pack-format{
+	width: 14.28%;
+	text-align: center;
+	float: left;
+}
+.pack-format img{
+	width: 90%;
+	height: 100px;
+	border: double rgba(0, 0, 0, 0.4);
+}
+.pack-format p{
+	font-size: 0.9em;
+	width: 60%;
+	margin: 3px auto 0 auto;
+}
+.pack-format a{
+	font-size: 0.8em;
+}
+.pack-format input{
+	display: block;
+	margin: 5px auto;
+}
+.pack2, .pack3, .pack4, .pack5, .addedline{
+	display: none;
+}
 #magic-line{ 
 	position: absolute; 
 	top: 154px; 
