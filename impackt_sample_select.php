@@ -181,23 +181,23 @@
 				<div class="user-select addmargin">
 					<div class="form-group group">
 					    <label class="checkbox-inline" for="checkboxes-0">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+					      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1" checked>
 					      18-25
 					    </label>
 					    <label class="checkbox-inline" for="checkboxes-1">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+					      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2" checked>
 					      26-35
 					    </label>
 					    <label class="checkbox-inline" for="checkboxes-2">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+					      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3" checked>
 					      36-45
 					    </label>
 					    <label class="checkbox-inline" for="checkboxes-3">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+					      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4" checked>
 					      46-55
 					    </label>
 					    <label class="checkbox-inline" for="checkboxes-4">
-					      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
+					      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5" checked>
 					      56+
 					    </label>
 					</div>
@@ -219,7 +219,7 @@
 					      Female
 					    </label>
 					    <label class="radio-inline" for="gender-2">
-					      <input type="radio" name="gender" id="gender-2" value="3">
+					      <input type="radio" name="gender" id="gender-2" value="3" checked>
 					      Both
 					    </label>
 					</div>
@@ -271,6 +271,10 @@
 	          item.css({
 	            "margin-top" : ""
 	          });
+	        }else{
+	        	item.css({
+	        		"margin-top": (store_height - sel_height) + "px"
+	        	})
 	        }
     	};
 
@@ -287,6 +291,8 @@
 			$('.selection.active').css({'color':'white'});
 			$('.left-help .active').stop().removeClass('active').hide();
 			$('.left-help [question="'+ activetrig +'"]').addClass('active').fadeIn('fast');
+			$('.help-content').hide().fadeIn('fast');
+			$('.technical-content').hide().fadeIn('fast');			
 		}
 
 		$(window).load(function() {

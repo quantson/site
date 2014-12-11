@@ -9,7 +9,6 @@
 	<link href="css/slider.css" rel="stylesheet">
 	<script src="js/jquery.js"></script>
 	<script src ="js/bootstrap.js"></script>
-	<script src="js/html5.image.preview.js"></script>
 </head>
 
 <body>
@@ -92,24 +91,32 @@
 					<div class="form-group group">
 						<div class="square upload added" cell="1">
 							<span class="glyphicon glyphicon-open icon-center"></span>
-							<input type="file" name="imagefile" onchange="previewImage(this,[120],4);">
-							<div class="imagePreview"></div>
+							<input type="file" name="imagefile" class="file">
+							<div class="square-overflow"><img class="imagePreview"></div>
 						</div>
-						<div class="square upload" cell="2">
+						<div class="square upload defaulthide" cell="2">
 							<span class="glyphicon glyphicon-plus icon-center"></span>
 							<span class="glyphicon glyphicon-trash trash"></span>
+							<input type="file" name="imagefile" class="file">
+							<div class="square-overflow"><img class="imagePreview"></div>
 						</div>
-						<div class="square upload" cell="3">
+						<div class="square upload defaulthide" cell="3">
 							<span class="glyphicon glyphicon-plus icon-center"></span>
 							<span class="glyphicon glyphicon-trash trash"></span>
+							<input type="file" name="imagefile" class="file">
+							<div class="square-overflow"><img class="imagePreview"></div>
 						</div>
-						<div class="square upload" cell="4">
+						<div class="square upload defaulthide" cell="4">
 							<span class="glyphicon glyphicon-plus icon-center"></span>
 							<span class="glyphicon glyphicon-trash trash"></span>
+							<input type="file" name="imagefile" class="file">
+							<div class="square-overflow"><img class="imagePreview"></div>
 						</div>
-						<div class="square upload" cell="5">
+						<div class="square upload defaulthide" cell="5">
 							<span class="glyphicon glyphicon-plus icon-center"></span>
 							<span class="glyphicon glyphicon-trash trash"></span>
+							<input type="file" name="imagefile" class="file">
+							<div class="square-overflow"><img class="imagePreview"></div>
 						</div>
 					</div>	
 				</div>
@@ -406,6 +413,10 @@
 	          item.css({
 	            "margin-top" : ""
 	          });
+	        }else{
+	        	item.css({
+	        		"margin-top": (store_height - sel_height) + "px"
+	        	})
 	        }
     	};
 
@@ -422,6 +433,8 @@
 			$('.selection.active').css({'color':'white'});
 			$('.left-help .active').stop().removeClass('active').hide();
 			$('.left-help [question="'+ activetrig +'"]').addClass('active').fadeIn('fast');
+			$('.help-content').hide().fadeIn('fast');
+			$('.technical-content').hide().fadeIn('fast');
 		}
 
 		$(window).load(function() {
@@ -467,6 +480,8 @@
 	$('.square:not(.added)').mousedown(function(){
 		var cell = $(this).attr('cell');
 		$(this).addClass('added');
+		$(this).find('.file').show();
+		$(this).find('.square-overflow').show();
 		$(this).find('.icon-center').removeClass('glyphicon-plus').addClass('glyphicon-open');
 		$('.pack'+cell).each(function(){
 			$(this).show();
@@ -475,12 +490,26 @@
 
 	$('.trash').mouseup(function(){
 		var cell = $(this).parent().attr('cell');
+		$(this).nextAll('.file').hide();
+		$(this).nextAll('.square-overflow').hide();
 		$(this).prev().removeClass('glyphicon-open').addClass('glyphicon-plus');
 		$(this).parent().removeClass('added');
 		$('.pack'+cell).each(function(){
 			$(this).hide();
 		});
 	});
+
+	$(".file").change(function(){
+		var img = $(this).next('.square-overflow').find('.imagePreview');
+    	if (this.files && this.files[0]) {
+    	    var reader = new FileReader();
+    	    reader.onload = function (e) {
+				img.attr('src', e.target.result);
+    	    }
+    	    reader.readAsDataURL(this.files[0]);
+    	}
+	});
+
 
 	</script>
 </body>
